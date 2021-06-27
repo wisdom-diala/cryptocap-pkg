@@ -73,4 +73,34 @@ class Coincap
     	$url = self::domainUrl()."/v2/rates/$id";
     	return self::getRequest($url);
     }
+
+    public static function exchanges()
+    {
+    	$url = self::domainUrl()."/v2/exchanges";
+    	return self::getRequest($url);
+    }
+
+    public static function singleExchanges($id)
+    {
+    	$url = self::domainUrl()."/v2/exchanges/$id";
+    	return self::getRequest($url);
+    }
+
+    public static function markets()
+    {
+    	$url = self::domainUrl()."/v2/markets";
+    	return self::getRequest($url);
+    }
+
+    public static function marketsByExchangeId($exchangeId)
+    {
+    	$url = self::domainUrl()."/v2/markets?exchangeId=$exchangeId";
+    	return self::getRequest($url);
+    }
+
+    public static function marketsByBaseSymbol($baseSymbol)
+    {
+    	$url = self::domainUrl()."/v2/markets?baseSymbol=$baseSymbol";
+    	return self::getRequest($url);
+    }
 }

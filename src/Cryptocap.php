@@ -41,4 +41,29 @@ class Cryptocap
     {
         return Coincap::singleRate($id);
     }
+
+    public function getExchanges()
+    {
+        return Coincap::exchanges();
+    }
+
+    public function getSingleExchanges($id)
+    {
+        return Coincap::singleExchanges($id);
+    }
+
+    public function getMarkets()
+    {
+        return Coincap::markets();
+    }
+
+    public function getMarketByExchangeId($exchangeId)
+    {
+        return Coincap::marketsByExchangeId($exchangeId);
+    }
+
+    public function getMarketByBaseSymbol($baseSymbol)
+    {
+        return Coincap::marketsByBaseSymbol($baseSymbol);
+    }
 }
