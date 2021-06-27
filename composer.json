@@ -1,0 +1,25 @@
+{
+    "name": "wisdom-diala/cryptocap-pkg",
+    "description": "Package to fetch cryptocurrency price, market value, assets etc.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diala Wisdom",
+            "email": "talk2whizzy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "WisdomDiala\\Cryptocap\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WisdomDiala\\Cryptocap\\Providers\\CryptocapServiceProvider"
+            ]
+        }
+    }
+}
