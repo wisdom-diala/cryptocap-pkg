@@ -43,7 +43,7 @@ class Coincap
     	$url = self::domainUrl()."/v2/assets?limit=$limit";
     	return self::getRequest($url);
     }
-
+ 
     public static function singleAsset($id)
     {
     	$url = self::domainUrl()."/v2/assets/$id";
@@ -53,6 +53,24 @@ class Coincap
     public static function assetHistory($id, $interval)
     {
     	$url = self::domainUrl()."/v2/assets/$id/history?interval=$interval";
+    	return self::getRequest($url);
+    }
+
+    public static function assetMarket($id, $limit)
+    {
+    	$url = self::domainUrl()."/v2/assets/$id/markets?limit=$limit";
+    	return self::getRequest($url);
+    }
+
+    public static function rates()
+    {
+    	$url = self::domainUrl()."/v2/rates";
+    	return self::getRequest($url);
+    }
+
+    public static function singleRate($id)
+    {
+    	$url = self::domainUrl()."/v2/rates/$id";
     	return self::getRequest($url);
     }
 }

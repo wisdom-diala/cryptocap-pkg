@@ -26,4 +26,19 @@ class Cryptocap
     {
     	return Coincap::assetHistory($id, $interval);
     }
+
+    public function getAssetMarket($id, $limit)
+    {
+        return Coincap::assetMarket($id, $limit);
+    }
+
+    public function getRates()
+    {
+        return Coincap::rates();
+    }
+
+    public function getSingleRate($id)
+    {
+        return Coincap::singleRate($id);
+    }
 }
