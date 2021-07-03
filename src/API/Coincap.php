@@ -92,15 +92,39 @@ class Coincap
     	return self::getRequest($url);
     }
 
-    public static function marketsByExchangeId($exchangeId)
+    public static function marketsByExchangeId($exchangeId, $limit=null)
     {
-    	$url = self::domainUrl()."/v2/markets?exchangeId=$exchangeId";
+    	$url = self::domainUrl()."/v2/markets?exchangeId=$exchangeId&limit=$limit";
     	return self::getRequest($url);
     }
 
-    public static function marketsByBaseSymbol($baseSymbol)
+    public static function marketsByBaseSymbol($baseSymbol, $limit=null)
     {
-    	$url = self::domainUrl()."/v2/markets?baseSymbol=$baseSymbol";
+    	$url = self::domainUrl()."/v2/markets?baseSymbol=$baseSymbol&limit=$limit";
     	return self::getRequest($url);
     }
+
+    public static function marketsByQuoteSymbol($quoteSymbol, $limit=null)
+    {
+        $url = self::domainUrl()."/v2/markets?quoteSymbol=$quoteSymbol&limit=$limit";
+        return self::getRequest($url);
+    }
+
+    public static function marketsByBaseId($baseId, $limit=null)
+    {
+        $url = self::domainUrl()."/v2/markets?baseId=$baseId&limit=$limit";
+        return self::getRequest($url);
+    }
+
+    public static function marketsByQuoteId($quoteId, $limit=null)
+    {
+        $url = self::domainUrl()."/v2/markets?quoteId=$quoteId&limit=$limit";
+        return self::getRequest($url);
+    }
+
+    // public static function marketsByQuoteId($quoteId, $limit=null)
+    // {
+    //     $url = self::domainUrl()."/v2/markets?quoteId=$quoteId&limit=$limit";
+    //     return self::getRequest($url);
+    // }
 }

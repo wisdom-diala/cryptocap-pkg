@@ -57,13 +57,28 @@ class Cryptocap
         return Coincap::markets();
     }
 
-    public function getMarketByExchangeId($exchangeId)
+    public function getMarketByExchangeId($exchangeId, $limit=null)
     {
-        return Coincap::marketsByExchangeId($exchangeId);
+        return Coincap::marketsByExchangeId($exchangeId, $limit);
     }
 
-    public function getMarketByBaseSymbol($baseSymbol)
+    public function getMarketByBaseSymbol($baseSymbol, $limit=null)
     {
-        return Coincap::marketsByBaseSymbol($baseSymbol);
+        return Coincap::marketsByBaseSymbol($baseSymbol, $limit);
+    }
+
+    public function getMarketByQuoteSymbol($quoteSymbol, $limit=null)
+    {
+        return Coincap::marketsByBaseSymbol($quoteSymbol, $limit);
+    }
+
+    public function getMarketByBaseId($baseId, $limit=null)
+    {
+        return Coincap::marketsByBaseId($baseId, $limit);
+    }
+
+    public function getMarketByQuoteId($quoteId, $limit=null)
+    {
+        return Coincap::marketsByQuoteId($quoteId, $limit);
     }
 }
