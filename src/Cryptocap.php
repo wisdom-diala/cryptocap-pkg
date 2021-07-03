@@ -81,4 +81,19 @@ class Cryptocap
     {
         return Coincap::marketsByQuoteId($quoteId, $limit);
     }
+
+    public function getMarketByAssetSymbol($assetSymbol, $limit=null)
+    {
+        return Coincap::marketsByAssetSymbol($assetSymbol, $limit);
+    }
+
+    public function getMarketByAssetId($assetId, $limit=null)
+    {
+        return Coincap::marketsByAssetId($assetId, $limit);
+    }
+
+    public function getCandles($exchange, $interval, $baseId, $quoteId, $start=null, $end=null)
+    {
+        return Coincap::candles($exchange, $interval, $baseId, $quoteId, $start, $end);
+    }
 }

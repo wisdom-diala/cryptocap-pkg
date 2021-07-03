@@ -122,9 +122,21 @@ class Coincap
         return self::getRequest($url);
     }
 
-    // public static function marketsByQuoteId($quoteId, $limit=null)
-    // {
-    //     $url = self::domainUrl()."/v2/markets?quoteId=$quoteId&limit=$limit";
-    //     return self::getRequest($url);
-    // }
+    public static function marketsByAssetSymbol($assetSymbol, $limit=null)
+    {
+        $url = self::domainUrl()."/v2/markets?assetSymbol=$assetSymbol&limit=$limit";
+        return self::getRequest($url);
+    }
+
+    public static function marketsByAssetId($assetId, $limit=null)
+    {
+        $url = self::domainUrl()."/v2/markets?assetId=$assetId&limit=$limit";
+        return self::getRequest($url);
+    }
+
+    public static function candles($exchange, $interval, $baseId, $quoteId, $start=null, $end=null)
+    {
+        $url = self::domainUrl()."/v2/candles?exchange=$exchange&interval=$interval&baseId=$baseId&quoteId=$quoteId&start=$start&end=$end";
+        return self::getRequest($url);
+    }
 }
