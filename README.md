@@ -6,6 +6,12 @@ For all endpoints, a single page offers 100 responses by default and supports up
 
 With this package, you don't have to bother about connecting to the endpoints, it has already be taken care of by the package facades class. To get response from the enpoints, you have to just use the related facade class which will out the response in json format.
 
+### Installation
+Run this composer command to install the package
+```
+composer require wisdom-diala/cryptocap-pkg
+```
+
 Below are the facades you can use to fetch the coresponding data you may need from the coincap api.
 
 ### Assets
