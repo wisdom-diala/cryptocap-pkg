@@ -56,6 +56,40 @@ Cryptocap::getAssets();
  }
 ```` 
  ### Response Data
- | Key       | Description               |
- |-----------|---------------------------|
- | id        |unique identifier for asset|
+ | Key        | Description                |
+ |------------|---------------------------|
+ |id          |unique identifier for asset|
+ |rank        |rank is in ascending order - this number is directly associated with the marketcap whereas the highest marketcap receives rank 1|
+ |symbol      |most common symbol used to identify this asset on an exchange|
+ |name        |proper name for asset|
+ |supply      |available supply for trading|
+ |maxSupply   |total quantity of asset issued|
+ |marketCapUsd  |supply x price|
+ |volumeUsd24Hr |quantity of trading volume represented in USD over the last 24 hours|
+ |priceUsd      |volume-weighted price based on real-time market data, translated to USD|
+ |changePercent24Hr |the direction and value change in the last 24 hours|
+ |vwap24Hr          |Volume Weighted Average Price in the last 24 hours|
+ 
+ Coincap doc link for assets: https://docs.coincap.io/#89deffa0-ab03-4e0a-8d92-637a857d2c91
+ 
+ ### Limit Assets
+ This allows you to limit the number of result you get per request.
+ ```php
+Cryptocap::getAssetsWithLimit(5);
+ ```
+ ### Single Asset
+ This allows you to fetch a single asset using the asset ID
+ ```php
+ Cryptocap::getSingleAsset('ethereum');
+ ```
+ ### Asset History
+ ```php
+ Cryptocap::getAssetHistory('ethereum', 'h2');
+ ```
+The first parameter is the id of the cryptocurrency and the second parameter is point-in-time interval. minute and hour intervals represent price at that time, the day interval represents average of 24 hour periods (timezone: UTC)
+Coincap asset history link: https://docs.coincap.io/#61e708a8-8876-4fb2-a418-86f12f308978
+
+### Asset Markets
+```php
+Cryptocap::getAssetMarket($id = 'ethereum', $limit = 5);
+```
