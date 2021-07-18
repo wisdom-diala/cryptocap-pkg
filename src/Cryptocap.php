@@ -3,7 +3,7 @@
 namespace WisdomDiala\Cryptocap;
 
 use WisdomDiala\Cryptocap\API\Coincap;
-
+ 
 
 class Cryptocap
 {
