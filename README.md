@@ -93,3 +93,64 @@ Coincap asset history link: https://docs.coincap.io/#61e708a8-8876-4fb2-a418-86f
 ```php
 Cryptocap::getAssetMarket($id = 'ethereum', $limit = 5);
 ```
+### Rates
+```php
+Cryptocap::getRates();
+```
+Coincap rates doc link: https://docs.coincap.io/#2a87f3d4-f61f-42d3-97e0-3a9afa41c73b
+
+### Single Rate
+```php
+Cryptocap::getSingleRate('bulgarian-lev');
+```
+### Exchanges
+```php
+Cryptocap::getExchanges();
+```
+Coincap exchanges doc link: https://docs.coincap.io/#e1c56fd0-d57a-40dd-8a24-4b0883b58cfb
+
+### Single Exchange
+```php
+Cryptocap::getSingleExchanges('binance');
+```
+### Markets
+```php
+Cryptocap::getMarkets();
+```
+Coincap markets doc link: https://docs.coincap.io/#d8fd6001-e127-448d-aadd-bfbfe2c89dbe
+
+### Market by exchange ID
+```php
+Cryptocap::getMarketByExchangeId($exchangeId = 'poloniex');
+```
+### Market by quote symbol
+```php
+Cryptocap::getMarketByQuoteSymbol($quoteSymbol = 'ETH');
+```
+### Market by base ID
+```php
+Cryptocap::getMarketByBaseId($baseId = 'bitcoin', $limit = 5);
+```
+### Market by quote ID
+```php
+Cryptocap::getMarketByQuoteId($quoteId = 'bitcoin', $limit = 5);
+```
+### Market by asset symbol
+```php
+Cryptocap::getMarketByAssetSymbol($assetSymbol = 'BTC', $limit = 5);
+```
+### Market by asset ID
+```php
+Cryptocap::getMarketByAssetId($assetId = 'bitcoin', $limit = 5);
+```
+
+### Candles
+```php
+Cryptocap::getCandles($exchange='poloniex', $interval='m1', $baseId='ethereum', $quoteId='bitcoin', $start=1528410925604, $end=1528411045607);
+```
+Coincap candles doc link: https://docs.coincap.io/#51da64d7-b83b-4fac-824f-3f06b6c8d944
+
+You can get the full documentation and well detailed explanation of the parameters used on the facade on the link below.
+https://docs.coincap.io/#ee30bea9-bb6b-469d-958a-d3e35d442d7a
+
+### If you really find this useful please give us a star.
