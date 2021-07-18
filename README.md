@@ -11,6 +11,13 @@ Run this composer command to install the package
 ```
 composer require wisdom-diala/cryptocap-pkg
 ```
+### After installing add the provider and the aliase on config/app.php
+```php
+// Provider 
+WisdomDiala\Cryptocap\Providers\CryptocapServiceProvider::class,
+// Aliase
+'Cryptocap' => WisdomDiala\Cryptocap\Facades\Cryptocap::class,
+```
 
 Below are the facades you can use to fetch the coresponding data you may need from the coincap api.
 
