@@ -160,4 +160,6 @@ Coincap candles doc link: https://docs.coincap.io/#51da64d7-b83b-4fac-824f-3f06b
 You can get the full documentation and well detailed explanation of the parameters used on the facade on the link below.
 https://docs.coincap.io/#ee30bea9-bb6b-469d-958a-d3e35d442d7a
 
+Video on how to use the package: https://www.youtube.com/watch?v=A4XDFWWDa24
+
 ### If you really find this useful please give us a star.
